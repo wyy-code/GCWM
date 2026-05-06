@@ -96,8 +96,3 @@ sbatch analysis/run_bridge_grad_8gpu.slurm.sh
 - Expert models are discovered by scanning one level under `EXPERT_ROOT`, sorted with `sort -V`.
 - `MEMORY_SIZE=-1` keeps all previous tasks in the continual memory. Use a positive value to keep only the most recent `N` tasks.
 
-## Acknowledgement
-The Codebase is built upon the following work -
-- [MergeBench](https://github.com/uiuctml/MergeBench)
-
-We appreciate them and many other related works for their open-source contributions.
