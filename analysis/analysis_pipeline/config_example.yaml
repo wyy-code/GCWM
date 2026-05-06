@@ -1,0 +1,47 @@
+run_name: your_run_name
+
+# Optional: if omitted, task_order will be inferred from benchmark model names.
+# task_order:
+#   - biology
+#   - business
+#   - chemistry
+#   - computer_science
+#   - economics
+#   - engineering
+#   - health
+#   - history
+#   - law
+#   - math
+#   - other
+#   - philosophy
+#   - physics
+#   - psychology
+
+# Optional aliases if mechanism tables and benchmark tables use different names.
+# task_alias_map:
+#   computer science: computer_science
+#   step_01_biology: biology
+
+input:
+  step_bridge: /path/to/step_bridge_summary.csv
+  pair_bridge: /path/to/pair_bridge_agg.csv
+  family: /path/to/family_agg.csv
+  top_geometry: /path/to/top_geometry_conflict_layers.csv
+  step_grad: /path/to/step_grad_summary.csv
+  pair_grad: /path/to/pair_grad_agg.csv
+  top_negative_grad: /path/to/top_negative_grad_cos_layers.csv
+  benchmark: /path/to/mmlu_pro_all_results.csv
+
+output_root: /path/to/analysis_final_results/your_run_name
+
+benchmark:
+  model_col: model
+  overall_col: overall_accuracy
+  # Optional if task names do not directly match benchmark columns.
+  # task_column_map:
+  #   biology: biology
+  #   computer_science: computer_science
+
+plot:
+  top_k_layers: 12
+  top_k_pairs: 20

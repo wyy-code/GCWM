@@ -1,0 +1,8 @@
+torch==2.1.2
+transformers
+datasets
+trl
+protobuf==3.20.3
+flash-attn==2.5.7
+tqdm
+deepspeed==0.14.5
